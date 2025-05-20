@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 
 let imgUrlArray = [
-  'https://media.cntraveller.in/wp-content/uploads/2016/07/spaincoastaltownslead-1366x768.jpg',
-  'https://www.fonstola.ru/pic/201308/1366x768/fonstola.ru_103637.jpg',
-  'https://beoriginaltours.com/wp-content/uploads/2017/06/ian-kelsall-dXDHJ1wXEL0-unsplash.jpg',
-  'https://s2.best-wallpaper.net/wallpaper/1366x768/1808/Valencia-Spain-city-houses-beach_1366x768.jpg',
-  'https://www.zastavki.com/pictures/1366x768/2017World___Spain_View_of_the_city_of_Cadaques__Costa_Brava._Spain_113073_24.jpg',
+  'https://images.wallpapersden.com/image/download/fantasy-castle-hd-landscape-art_bW5qbGyUmZqaraWkpJRmaGtrrWxrbQ.jpg',
+  'https://avatars.mds.yandex.net/i?id=6af57c32f9d62446f0812eec26b09dcb_l-4914134-images-thumbs&n=13',
+  'https://wallpapercrafter.com/sizes/1366x768/132057-Oregon-mountains-hills-sunset-flowers-artwork-nature-landscape.jpg',
+  'https://avatars.mds.yandex.net/i?id=14674e00273a9c0df3410dfd8c08c3d9_l-4248407-images-thumbs&n=13',
+  'https://images.hdqwalls.com/download/remembering-digital-art-landscape-5k-s1-1366x768.jpg',
 ]
 let srAddr = ref(imgUrlArray[0])
 
@@ -28,10 +28,13 @@ changeImageRandomly()
       :style="{ backgroundImage: `url('${srAddr}')` }"
     >
       <div class="bg-opacity-80 bg-[#EC6665] py-[30px] px-4">
-        <p class="w-full text-center text-white text-[26px]">Гиды, Экскурсии и Туры по Испании</p>
+        <p class="w-full text-center text-white text-[26px]">
+          Гиды, Экскурсии и Туры по фентезийным мирам
+        </p>
         <p class="w-full font-light text-center text-white text-sm">
-          Частные гиды, индивидуальные экскурсии и туры по Андалусии, Мадриду и<br />
-          другим регионам Испании
+          Частные гиды, индивидуальные экскурсии и туры по Магической академии, Летающему архипелагу
+          и<br />
+          другим фентезийным мирам
         </p>
       </div>
     </div>
