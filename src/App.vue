@@ -2,7 +2,9 @@
 import HelloPic from './components/helloPic.vue'
 import NavMenuItem from './components/navMenuItem.vue'
 import ServiceCard from './components/serviceCard.vue'
+import WhyWe from './components/whyWe.vue'
 import { dataServiceArray } from './dataArrays/dataServiceArray'
+import { whyWeArray } from './dataArrays/whyWeArray'
 </script>
 
 <template>
@@ -19,15 +21,30 @@ import { dataServiceArray } from './dataArrays/dataServiceArray'
     </div>
   </div>
   <div class="mt-[70px]"><HelloPic></HelloPic></div>
-  <p class="uppercase text-[#424242] w-full text-center my-10 text-3xl">Наши услуги</p>
-  <div class="bg-[#FAFAFA] lg:mx-80 mx-10 flex justify-center">
-    <div class="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-5">
-      <ServiceCard
-        v-for="item in dataServiceArray"
+  <div class="bg-[#FAFAFA] pt-10">
+    <p class="uppercase text-[#424242] w-full text-center mb-10 text-3xl">Наши услуги</p>
+    <div class="lg:px-80 px-10 flex justify-center pb-20">
+      <div class="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-5">
+        <ServiceCard
+          v-for="item in dataServiceArray"
+          :key="item"
+          :head="item.head"
+          :img="item.img"
+        ></ServiceCard>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="uppercase text-[#424242] w-full text-center my-10 text-3xl">Почему мы?</p>
+    <div class="flex justify-center w-full mb-10 space-x-3">
+      <WhyWe
+        v-for="item in whyWeArray"
         :key="item"
-        :head="item.head"
+        :title="item.title"
+        :body="item.content"
         :img="item.img"
-      ></ServiceCard>
+      ></WhyWe>
     </div>
   </div>
 </template>
