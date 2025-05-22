@@ -1,16 +1,35 @@
 <script setup>
-const data = [
-  '<div class="h-10 w-10 bg-red-100">Slide 1</div>',
-  '<div class="example-slide">Slide 2</div>',
-  '<div class="example-slide">Slide 3</div>',
-]
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+
+const slides = [
+  { type: 'text', content: 'Slide 2' },
+  { type: 'text', content: 'Slide 3' },
+];
 </script>
 
 <template>
-  <vue-carousel :data="data" :controls="true"></vue-carousel>
+  <div class="carousel-container">
+    <Carousel class="h-[500px] w-full" :items-to-show="1" :wrap-around="true">
+      <Slide v-for="(slide, index) in slides" :key="index">
+        <div class="w-full h-full">
+          <div class="example-slide">{{ slide.content }}</div>
+        </div>
+      </Slide>
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
+  </div>
 </template>
 
 <style>
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .example-slide {
   align-items: center;
   background-color: #666;
@@ -19,6 +38,14 @@ const data = [
   font-size: 1.5rem;
   justify-content: center;
   min-height: 500px;
-  width: 110px;
+  width: 100%;
+}
+
+.carousel__prev,
+.carousel__next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
 }
 </style>
