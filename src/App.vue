@@ -16,8 +16,6 @@ import { whyWeArray } from './dataArrays/whyWeArray'
     <div class="my-auto gap-x-7 flex mr-4 h-full pt-5">
       <NavMenuItem label="ГЛАВНАЯ"></NavMenuItem>
       <NavMenuItem label="Услуги"></NavMenuItem>
-      <NavMenuItem label="ПОЛЕЗНАЯ ИНФОРМАЦИЯ"></NavMenuItem>
-      <NavMenuItem label="БЛОГ"></NavMenuItem>
       <NavMenuItem label="О НАС"></NavMenuItem>
     </div>
   </div>
@@ -103,5 +101,11 @@ import { whyWeArray } from './dataArrays/whyWeArray'
     <div class="w-full justify-center flex items-center">
       <CarouselComponent></CarouselComponent>
     </div>
+  </div>
+  <div class="static bottom-0 left-0 right-0 py-10 flex justify-center bg-[#F5F5F5]">
+    <p class="text-center text-sm/22 text-[#333333]">
+      Конец демо-сайта. <br />
+      Хотите себе такой-же? <span @click="console.log('hi')" class="text-[#EC6665] underline">Напишите мне!</span>
+    </p>
   </div>
 </template>

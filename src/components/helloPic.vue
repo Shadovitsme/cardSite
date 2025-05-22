@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 
 let imgUrlArray = [
-  'https://images.wallpapersden.com/image/download/fantasy-castle-hd-landscape-art_bW5qbGyUmZqaraWkpJRmaGtrrWxrbQ.jpg',
-  'https://avatars.mds.yandex.net/i?id=6af57c32f9d62446f0812eec26b09dcb_l-4914134-images-thumbs&n=13',
-  'https://wallpapercrafter.com/sizes/1366x768/132057-Oregon-mountains-hills-sunset-flowers-artwork-nature-landscape.jpg',
-  'https://avatars.mds.yandex.net/i?id=14674e00273a9c0df3410dfd8c08c3d9_l-4248407-images-thumbs&n=13',
-  'https://images.hdqwalls.com/download/remembering-digital-art-landscape-5k-s1-1366x768.jpg',
+  'src/assets/images/bgImg/wallpapersden.com_fantasy-castle-hd-landscape-art_1366x768.jpg',
+  'src/assets/images/bgImg/i.webp',
+  'src/assets/images/bgImg/132057-Oregon-mountains-hills-sunset-flowers-artwork-nature-landscape.jpg',
+  'src/assets/images/bgImg/2.webp',
+  'src/assets/images/bgImg/remembering-digital-art-landscape-5k-s1-1366x768.jpg',
 ]
 let srAddr = ref(imgUrlArray[0])
 
