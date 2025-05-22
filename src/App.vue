@@ -1,14 +1,19 @@
 <script setup>
+import { ref } from 'vue'
 import CarouselComponent from './components/carouselComponent.vue'
 import HelloPic from './components/helloPic.vue'
+import ModalContactWindow from './components/modalContactWindow.vue'
 import NavMenuItem from './components/navMenuItem.vue'
 import ServiceCard from './components/serviceCard.vue'
 import WhyWe from './components/whyWe.vue'
 import { dataServiceArray } from './dataArrays/dataServiceArray'
 import { whyWeArray } from './dataArrays/whyWeArray'
+
+const modalVisible = ref(true)
 </script>
 
 <template>
+  <ModalContactWindow v-if="modalVisible" @close="modalVisible = !modalVisible"></ModalContactWindow>
   <div
     class="absolute top-0 left-0 right-0 px-1.5 pb-3 flex justify-between border-b-2 border-yellow-400"
   >
@@ -105,7 +110,8 @@ import { whyWeArray } from './dataArrays/whyWeArray'
   <div class="static bottom-0 left-0 right-0 py-10 flex justify-center bg-[#F5F5F5]">
     <p class="text-center text-sm/22 text-[#333333]">
       Конец демо-сайта. <br />
-      Хотите себе такой-же? <span @click="console.log('hi')" class="text-[#EC6665] underline">Напишите мне!</span>
+      Хотите себе такой-же?
+      <span @click="modalVisible=true" class="text-[#EC6665] underline">Напишите мне!</span>
     </p>
   </div>
 </template>
