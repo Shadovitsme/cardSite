@@ -9,20 +9,19 @@ import { whyWeArray } from './dataArrays/whyWeArray'
 </script>
 
 <template>
-
   <div
-  class="absolute top-0 left-0 right-0 px-1.5 pb-3 flex justify-between border-b-2 border-yellow-400"
+    class="absolute top-0 left-0 right-0 px-1.5 pb-3 flex justify-between border-b-2 border-yellow-400"
   >
-  <img class="mt-3 size-11 my-auto" src="./assets/images/logoSite.jpg" />
-  <div class="my-auto gap-x-7 flex mr-4 h-full pt-5">
-    <NavMenuItem label="ГЛАВНАЯ"></NavMenuItem>
-    <NavMenuItem label="Услуги"></NavMenuItem>
-    <NavMenuItem label="ПОЛЕЗНАЯ ИНФОРМАЦИЯ"></NavMenuItem>
-    <NavMenuItem label="БЛОГ"></NavMenuItem>
-    <NavMenuItem label="О НАС"></NavMenuItem>
+    <img class="mt-3 size-11 my-auto" src="./assets/images/logoSite.jpg" />
+    <div class="my-auto gap-x-7 flex mr-4 h-full pt-5">
+      <NavMenuItem label="ГЛАВНАЯ"></NavMenuItem>
+      <NavMenuItem label="Услуги"></NavMenuItem>
+      <NavMenuItem label="ПОЛЕЗНАЯ ИНФОРМАЦИЯ"></NavMenuItem>
+      <NavMenuItem label="БЛОГ"></NavMenuItem>
+      <NavMenuItem label="О НАС"></NavMenuItem>
+    </div>
   </div>
-</div>
-<div class="mt-[70px]"><HelloPic></HelloPic></div>
+  <div class="mt-[70px]"><HelloPic></HelloPic></div>
   <div class="bg-[#FAFAFA] pt-10">
     <p class="uppercase text-[#424242] w-full text-center mb-10 text-3xl">Наши услуги</p>
     <div class="lg:px-80 px-10 flex justify-center pb-20">
@@ -99,11 +98,10 @@ import { whyWeArray } from './dataArrays/whyWeArray'
     </div>
   </div>
   <!-- about us end -->
-  <div class="bg-gray-200 h-52">
-    <p class="uppercase text-[#424242] w-full text-center my-10 text-3xl">Отзывы</p>
-    <div class="flex justify-center w-full h-full mb-10 space-x-3">
-<CarouselComponent></CarouselComponent>
-
+  <div class="mb-28">
+    <p class="uppercase w-full text-center my-10 text-3xl">Отзывы</p>
+    <div class="w-full justify-center flex items-center">
+      <CarouselComponent></CarouselComponent>
     </div>
   </div>
 </template>
